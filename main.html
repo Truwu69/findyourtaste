@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants and Mess Listing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nearby Restaurants and Mess</h1>
+    </header>
+
+    <!-- Dropdown Filter -->
+    <div class="filter-section">
+        <label for="category-filter">Filter by Category:</label>
+        <select id="category-filter" onchange="filterRestaurants()">
+            <option value="all">All</option>
+            <option value="North Indian Special">North Indian Special</option>
+            <option value="South Indian Kings">South Indian Kings</option>
+            <option value="Fast Food">Fast Food</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Continental">Continental</option>
+        </select>
+    </div>
+
+    <div class="restaurant-list" id="restaurant-list">
+        <!-- Restaurant 1 -->
+        <div class="restaurant-item" data-category="North Indian Special" onclick="window.location.href='restaurant1.html'">
+            <img src="hotel1.jpg" alt="Hotel Image" class="restaurant-image">
+            <div class="restaurant-details">
+                <h2 class="restaurant-name">Hotel Name</h2>
+                <div class="restaurant-rating">Rating: ⭐⭐⭐⭐</div>
+                <div class="restaurant-category">Category: North Indian Special</div>
+                <div class="restaurant-address">Address: 123, Example Street, City</div>
+            </div>
+            <div class="restaurant-price">
+                ₹1500/month
+            </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="restaurant-item" data-category="South Indian Kings" onclick="window.location.href='restaurant2.html'">
+            <img src="hotel2.jpg" alt="Hotel Image" class="restaurant-image">
+            <div class="restaurant-details">
+                <h2 class="restaurant-name">Mess XYZ</h2>
+                <div class="restaurant-rating">Rating: ⭐⭐⭐</div>
+                <div class="restaurant-category">Category: South Indian Kings</div>
+                <div class="restaurant-address">Address: 456, Main Road, City</div>
+            </div>
+            <div class="restaurant-price">
+                ₹1200/month
+            </div>
+        </div>
+
+        <!-- Additional restaurant items with similar structure -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
